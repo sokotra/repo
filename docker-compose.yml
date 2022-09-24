@@ -1,0 +1,156 @@
+version: "3.3"
+services:
+  mongoservice:
+    image: mongo:latest
+    container_name: mongo-container
+    hostname: localhost
+    network_mode: host
+    ports:
+      - 27017:27017
+    restart: always
+
+
+  mysql:
+    image: mysql:latest
+    hostname: localhost
+    network_mode: host
+    ports:
+      - 3306:3306
+    restart: always
+    container_name: mysqlcontainer
+    environment:
+      MYSQL_ROOT_PASSWORD: 'Vishnu@1'
+      MYSQL_PASSWORD: root
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"      
+
+  config-server:
+    container_name: config-server
+    build: config-server/
+    hostname: localhost
+    network_mode: host
+    ports:
+      - 8888:8888
+    restart: always
+
+  eureka-server:
+    container_name: eureka-server
+    build: eureka-server/
+    hostname: localhost
+    network_mode: host
+    depends_on:
+      - config-server
+    ports:
+      - 8761:8761
+    restart: always
+
+  api-gateway:
+    image: api-gateway
+    build: api-gateway/
+    restart: always
+    hostname: localhost
+    network_mode: host
+    depends_on:
+      - eureka-server
+      - config-server
+    ports:
+      - 8080:8080
+
+  user-service:
+    container_name: user-service
+    build: user-service/
+    hostname: localhost
+    network_mode: host
+    ports:
+      - 8081:8081
+    depends_on:
+      - mongoservice
+      - eureka-server
+      - config-server
+      - rabbitmq
+    restart: always
+    
+  authentication-service:
+    container_name: authentication-service
+    build: authentication-service/
+    hostname: localhost
+    network_mode: host
+    ports:
+      - 8095:8095
+    depends_on:
+      - mysql
+      - eureka-server
+      - config-server
+      - rabbitmq
+    restart: always
+
+
+  bookings-management:
+    container_name: bookings-management
+    build: bookings-management/
+    hostname: localhost
+    network_mode: host
+    ports:
+      - 8087:8087
+    depends_on:
+      - mongoservice
+      - eureka-server
+      - config-server
+    restart: always
+    
+  chat-service:
+    container_name: chat-service
+    build: chat-service/
+    hostname: localhost
+    network_mode: host
+    ports:
+      - 8086:8086
+    depends_on:
+      - mongoservice
+      - eureka-server
+      - config-server
+    restart: always
+    
+  email-service:
+    container_name: email-service
+    build: email-service/
+    hostname: localhost
+    network_mode: host
+    ports:
+      - 8085:8085
+    depends_on:
+      - mongoservice
+      - eureka-server
+      - config-server
+    restart: always
+    
+  product-webapp:
+    container_name: product-webapp
+    build: product-webapp/
+    hostname: localhost
+    network_mode: host
+    ports:
+      - 4200:4200
+    restart: always
+    
+  payment-service:
+    container_name: payment-service
+    build: payment-service/
+    hostname: localhost
+    network_mode: host
+    depends_on:
+      - mysql
+      - config-server
+      - eureka-server
+    ports:
+      - 8084:8084
+    restart: always
+    
+  rabbitmq:
+    image: rabbitmq:management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    restart: always
+    environment:
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "guest"

@@ -1,0 +1,268 @@
+.image {
+  /* position: relative; */
+  height: 40vh;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* position: absolute; */
+  height: 100vh;
+  width: 100%;
+}
+
+.form-container form {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  border-radius: 0.5rem;
+  top: 10%;
+  left: 0;
+  right: 0;
+}
+
+.input-box span {
+  font-weight: 500;
+}
+.input-box input {
+  padding: 10px;
+  outline: none;
+  border: none;
+  background: #fff;
+  border-radius: 1rem;
+  font-size: 25px;
+}
+.submitbtn {
+  background: #a6c7f7;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 1rem;
+  /* position: absolute; */
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  border-radius: 0.5rem;
+  top: 50%;
+
+  padding: 5px;
+  outline: none;
+  border: none;
+  border-radius: 1rem;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.image2 {
+  position: absolute;
+  height: 50vh;
+}
+.content2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* position: absolute; */
+  /* height: 55vh; */
+  width: 100%;
+  background: #fff;
+}
+.ride {
+  margin-top: 2rem;
+}
+.ride-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 5%;
+
+  margin-top: 2rem;
+  margin-right: 1rem;
+}
+
+.steps {
+  margin-left: 10%;
+  text-align: center;
+  padding: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  margin-bottom: 1rem;
+}
+.steps svg {
+  font-size: 50px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 0.5rem;
+}
+.steps h2 {
+  font-size: 30px;
+  font-weight: 500;
+}
+.steps p {
+  font-size: 20px;
+}
+.heading {
+  text-align: center;
+  margin-top: 20px;
+}
+.heading span {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.heading h1 {
+  font-size: 2rem;
+}
+.image3 {
+  position: relative;
+  height: 100vh;
+}
+.vendorinfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* position: absolute; */
+  height: 50vh;
+  width: 100%;
+  background: #fff;
+}
+.registernow {
+  margin-top: 50px;
+  background: black;
+  color: white;
+  border-radius: 20px;
+  font-size: 20px;
+  padding: 10px;
+}
+
+/* .steps:hover{
+    transform: scale(1.1);
+} */
+.header {
+  display: flex;
+  justify-content: space-between;
+  background: #f2f2f2;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  /* margin-bottom: 2rem; */
+}
+.header img {
+  align-items: start;
+}
+.navbar ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 1.5rem;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 500;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  /* margin-top: 0.5rem; */
+}
+.navbar ul li a,
+.navbar ul li button {
+  text-decoration: none;
+  color: #000;
+}
+.logo {
+  margin: auto 3rem;
+  color: #000;
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+.navbar ul li a::after,
+.navbar ul li button ::after {
+  content: "";
+  height: 3px;
+  width: 0%;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  background: #000;
+  transition: 0.2s ease-out;
+}
+.navbar ul {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a:hover::after,
+.navbar ul li button:hover::after {
+  width: 100%;
+}
+.parallex {
+  background: url("../assests/images/parallex.jpeg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 700px;
+  position: relative;
+}
+.selection-container {
+  position: absolute;
+  width: 100%;
+  top: 25%;
+}
+.selection-container form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.avatar-img {
+  border-radius: 2rem;
+}
+.user-dropdown {
+  position: absolute;
+  right: 0;
+  background: lavender;
+  border-radius: 10px;
+  z-index: 100;
+}
+.user-dropdown-menu ul {
+  display: flex;
+  flex-direction: column;
+}
+.user-dropdown-menu ul li {
+  margin: 1rem;
+  font-size: 16px;
+}
+.user-dropdown-menu ul li:hover {
+  opacity: 0.5;
+}
+
+@media (max-width: 1000px) {
+  .ride-container {
+    flex-direction: column;
+  }
+  .content2 {
+    position: relative;
+    height: 800px;
+  }
+}
+@media (max-width: 768px) {
+  .logo {
+    margin: auto;
+  }
+}
+@media (max-width: 445px) {
+  .content2 {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .selection-container form {
+    width: 90%;
+    margin: auto;
+  }
+}
+@media (max-width: 370px) {
+  .navbar ul li {
+    margin: 1rem;
+  }
+}
+@media (max-width: 440px) {
+  .header.column-header {
+    flex-direction: column;
+    
+  }
+}

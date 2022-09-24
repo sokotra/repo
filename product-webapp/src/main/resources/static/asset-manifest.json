@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ace4c14d.css",
+    "main.js": "/static/js/main.b25d2117.js",
+    "static/js/703.16f8c98e.chunk.js": "/static/js/703.16f8c98e.chunk.js",
+    "static/js/236.abe17824.chunk.js": "/static/js/236.abe17824.chunk.js",
+    "static/js/787.994511a4.chunk.js": "/static/js/787.994511a4.chunk.js",
+    "static/media/parallex.jpeg": "/static/media/parallex.8daebf30c7f2667e28e9.jpeg",
+    "static/media/profileCars.png": "/static/media/profileCars.7acf390f002a27630c75.png",
+    "static/media/purchase.jpg": "/static/media/purchase.e61971b443126534fade.jpg",
+    "static/media/defaultImage.png": "/static/media/defaultImage.7e78807bf675e41dac7c.png",
+    "static/media/vendor2.png": "/static/media/vendor2.8dc63912359d016655e4.png",
+    "static/media/profile.png": "/static/media/profile.5faf09a7795d28bf5a2b.png",
+    "index.html": "/index.html",
+    "main.ace4c14d.css.map": "/static/css/main.ace4c14d.css.map",
+    "main.b25d2117.js.map": "/static/js/main.b25d2117.js.map",
+    "703.16f8c98e.chunk.js.map": "/static/js/703.16f8c98e.chunk.js.map",
+    "236.abe17824.chunk.js.map": "/static/js/236.abe17824.chunk.js.map",
+    "787.994511a4.chunk.js.map": "/static/js/787.994511a4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ace4c14d.css",
+    "static/js/main.b25d2117.js"
+  ]
+}

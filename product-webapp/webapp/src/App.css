@@ -1,0 +1,369 @@
+.carimg {
+  width: 200px;
+}
+
+.textarea {
+  height: 10rem;
+  resize: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+.text-line {
+  border: none; /* Get rid of the browser's styling */
+  border-bottom: 1px solid black; /* Add your own border */
+}
+.scroll-sidebar {
+  max-height: 92vh;
+  overflow: auto;
+  padding: 0 0 0 0;
+}
+.scroll-sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.toggle-filter {
+  display: none;
+}
+
+.filter-content-visiable {
+  transition: opacity 1s ease-out;
+  opacity: 1;
+  height: auto;
+}
+
+.listCard:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.5);
+  transition: width 0.3s;
+}
+
+@media screen and (max-width: 800px) {
+  .btn-gps {
+    margin-left: 5rem;
+    width: 50%;
+  }
+  .scroll-sidebar {
+    overflow: visible;
+  }
+  .toggle-filter {
+    display: block;
+  }
+  .filter-content {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .vendors-profile, .profile-leftView {
+    display: none;
+  }
+  .login-leftView {
+    display: none;
+  }
+}
+
+.car-details-section .descr {
+  width: 90%;
+  font-weight: 400;
+  font-size: 20px;
+}
+.car-details-section .left-row {
+  line-height: 10px;
+  font-weight: bold;
+  margin-bottom: 14px;
+  display: grid;
+  text-align: center;
+}
+.car-details-section .left-row span {
+  margin: 0;
+  line-height: 1.5rem;
+}
+.car-details-section .left-row img {
+  max-width: 120px;
+  height: 100px;
+  margin: 0 auto 10px auto;
+}
+
+.car-details-section .review {
+  font-size: 17px;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  width: 90%;
+}
+.car-details-section .vendor-name {
+  font-weight: bolder;
+  font-size: 20px;
+  margin-left: 15px;
+  align-items: center;
+  width: 90%;
+}
+.car-details-section.margin {
+  margin: 0 2.5rem;
+}
+.car-details{
+  margin-bottom: 2rem;
+  margin-top: 15px;
+}
+
+.masthead h3 {
+  font-size: 45px;
+  margin-top: 10px;
+  text-transform: capitalize;
+}
+.masthead {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  float: right;
+}
+.car-details-section .masthead span {
+  font-size: 30px;
+}
+
+.car-details-section .reviewflow {
+  width: 90%;
+  max-height: 46vh;
+  overflow-y: scroll;
+  position: relative;
+}
+.car-details-section .tip {
+  background-color: #2d2822;
+  margin-top: 15px;
+  padding: 10px 20px;
+  max-width: 450px;
+  color: white;
+}
+.car-details-section .scrollbar {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+}
+.car-details-section .review-name {
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2.5rem;
+  color: #fff;
+  margin: 0;
+}
+.car-details-section .vendor p {
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2.5rem;
+  color: #fff;
+}
+.car-details-section .ratingcount {
+  font-weight: "bolder";
+  margin-top: "13px";
+  margin-left: "-5px";
+}
+
+.car-details img {
+  /* width: 35%; */
+  height: auto;
+  max-width: 505px;
+  margin-left: 10%;
+}
+.car-details .additional-details {
+  font-size: 25px;
+  text-transform: capitalize;
+}
+.car-details .additional-details p {
+  display: block;
+}
+
+.car-details-section .vendor {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.car-details-section .vendor p {
+  margin: 0;
+}
+.car-details .additional-details svg {
+  margin-right: 10px;
+}
+.car-details {
+  display: flex;
+}
+.car-details-section .star {
+  margin: 0 0.5rem;
+}
+
+.masthead button {
+  margin: 1rem;
+  float: "inherit";
+}
+.gradient {
+  margin: 0px;
+  padding: 0px;
+  height: 50vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #184384;
+}
+.bookinginfo-body {
+  min-height: 400px;
+  max-width: 70%;
+  margin: auto;
+  margin-top: auto;
+  margin-top: -35vh;
+  justify-content: center;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.bookinginfo-right {
+  display: flex;
+  justify-content: center;
+}
+.bookinginfo-right li {
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+.bookinginfo-right svg {
+  min-width: 1rem;
+  margin-right: 10px;
+}
+.bookinginfo-body h1 {
+  text-align: center;
+  padding-top: 2rem;
+}
+.bookinginfo-left img {
+  width: 60%;
+  height: 90%;
+}
+.bookinginfo-left {
+  font-size: 25px;
+  text-transform: capitalize;
+  font-weight: 600;
+  text-align: center;
+}
+.bookinginfo-left svg {
+  margin-right: 10px;
+}
+.price-summary {
+  text-align: center;
+  width: 45%;
+  margin: auto;
+  padding: 2rem 0;
+}
+.fare-particulars {
+  font-size: 25px;
+  font-weight: 400;
+}
+.fare-amount {
+  font-size: 25px;
+  text-align: start;
+}
+.price-summary p {
+  font-size: 24px;
+}
+.price-summary div {
+  display: flex;
+  justify-content: center;
+}
+.price-summary div p:first-child {
+  width: 70%;
+  text-align: start;
+}
+.price-summary div p:first-child svg {
+  margin-top: -0.5rem;
+  margin-right: 0.5rem;
+}
+.total-fare p{
+  font-size: 30px;
+  font-weight: 600;
+}
+.bookinginfo-right ul{
+  list-style: none;
+  margin-top: 40px;
+}
+.rating-part{
+  display: flex;
+}
+#span1{
+  font-size: xx-large;
+  font-weight: bolder;
+}
+#span2{
+  font-weight: bolder;
+  margin-top: 12px;
+  margin-left: -5px;
+}
+.user-review{
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+
+@media (max-width: 768px) {
+  .car-details-section .desc-row {
+    flex-direction: column;
+  }
+  .car-details-section .desc-row > div:first-child {
+    margin-bottom: 2rem;
+  }
+  .car-details-section .left-row {
+    width: 33.3%;
+  }
+  .car-details-section .reviewflow {
+    width: 100%;
+  }
+  .car-details {
+    flex-direction: column;
+  }
+  .masthead button {
+    margin: 0.5rem;
+  }
+  .car-details img {
+    margin-left: 0;
+    width:100%
+  }
+  .bookinginfo-body h1 ~ div {
+    flex-direction: column;
+  }
+  .bookinginfo-body {
+    max-width: 80%;
+  }
+  .price-summary {
+    width: 100%;
+  }
+}
+@media (max-width: 540px) {
+  .bookinginfo-right {
+    flex-direction: column;
+  }
+}
+@media (max-width:1100px) {
+  .car-details img{
+    max-width: 400px;
+  }
+  
+}
+@media (max-width:943px) {
+  .car-details img{
+    max-width: 250px;
+    margin: 0 auto;
+  }
+  
+}
